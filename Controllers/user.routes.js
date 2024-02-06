@@ -8,6 +8,8 @@ const UserModel = require("../Models/User.model");
 
 userController.post("/register", (req, res) => {
   const { email, password } = req.body;
+  if(!password){
+    return res.send("Please enter your password")
   if(!email){
     return res.send("Please Enter your email")
   }
