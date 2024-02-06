@@ -8,6 +8,9 @@ const UserModel = require("../Models/User.model");
 
 userController.post("/register", (req, res) => {
   const { email, password } = req.body;
+  if(!email){
+    return res.send("Please Enter your email")
+  }
   bcrypt.hash(password, 6, async function (err, hash) {
     if (err) {
       return res.send("Please Try Again");
