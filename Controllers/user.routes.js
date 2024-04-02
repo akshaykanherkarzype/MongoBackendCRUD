@@ -10,8 +10,6 @@ userController.post("/register", (req, res) => {
   const { email, password } = req.body;
   if(!password){
     return res.send("Please enter your password")
-  if(!email){
-    return res.send("Please Enter your email")
   }
   bcrypt.hash(password, 6, async function (err, hash) {
     if (err) {
