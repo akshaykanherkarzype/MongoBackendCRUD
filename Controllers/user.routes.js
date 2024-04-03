@@ -11,6 +11,8 @@ userController.post("/register", (req, res) => {
   if(!password){
     return res.send("Please enter your password")
   }
+  console.log("emial: ", email)
+  console.log("password: ", password)
   bcrypt.hash(password, 6, async function (err, hash) {
     if (err) {
       return res.send("Please Try Again");
