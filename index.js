@@ -13,7 +13,7 @@ const NotesController = require("./Controllers/notes.route");
 const Authentication = require("./Middlewares/Authentication");
 
 app.get("/", (req, res) => {
-  res.send("This is Homepage, from Akshay, chyaaila ghoda");
+  res.send("This is Homepage, from Akshay, ghoda");
 });
 
 app.use("/user", userController);
